@@ -115,20 +115,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\Amir%27s Projs\Test\Test\Graph.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Graph.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Player.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\Amir%27s Projs\Test\Test\ConsoleResize.h" />
-    <ClInclude Include="..\..\..\Amir%27s Projs\Test\Test\Graph.h" />
     <ClInclude Include="AtExit.h" />
     <ClInclude Include="ClearScreen.h" />
+    <ClInclude Include="ConsoleResize.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameObject.h" />
+    <ClInclude Include="Graph.h" />
     <ClInclude Include="Player.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

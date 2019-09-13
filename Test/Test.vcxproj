@@ -122,6 +122,7 @@
     <ClCompile Include="Player.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AsciiChars.h" />
     <ClInclude Include="AtExit.h" />
     <ClInclude Include="ClearScreen.h" />
     <ClInclude Include="ConsoleResize.h" />

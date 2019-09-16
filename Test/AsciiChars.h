@@ -11,3 +11,17 @@ void DrawChars()
 
 	AtExit();
 }
+
+
+class AsciiChars
+{
+public:
+	AsciiChars();
+	void GetChar(int id);
+
+private:
+	// The assigned target to get for whenever a call is
+	// made to aquire an ascii char object
+	int m_charTarget;
+
+};

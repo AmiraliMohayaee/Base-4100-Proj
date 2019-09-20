@@ -9,13 +9,13 @@
 
 int main()
 {
-	ConsoleResize();
-	Game* game = new Game();
+	//ConsoleResize();
+	//Game* game = new Game();
 
-	game->Intro();
-	game->Init();
-	game->Draw();
-	game->Update();
+	//game->Intro();
+	//game->Init();
+	//game->Draw();
+	//game->Update();
 
 	AtExit();
 	ClearScreen();

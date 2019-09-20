@@ -48,17 +48,7 @@ void Game::Intro()
 
 void Game::Graph()
 {
-	char cha = 169;
 
-	// forming a simple graph
-	for (int i = 0; i < 5; i++)
-	{
-		for (int j = 0; j < 5; j++)
-		{
-			std::cout << cha;
-		}
-		std::cout << std::endl;  
-	}
 }
 
 void Game::Battle()

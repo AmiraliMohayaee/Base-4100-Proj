@@ -4,16 +4,20 @@
 class Graph
 {
 public:
-	Graph();
-	void Draw(int rows, int columns);
+	Graph(int rows, int columns) : m_rows(rows), m_columns(columns) 
+	{
+		//GraphDim 
+	};
+
+	void Draw();
 	void Update();
 
 
 private:
-	int row;
-	int column;
-	int leftTop;
-	int rightTop;
-	int botLeft;
-	int botRight;
+	enum GraphDim { rows, colums };
+
+	int m_rows;
+	int m_columns;
+
+	int m_map[rows][colums] = { };
 };

@@ -1,18 +1,25 @@
 #include "Graph.h"
+#include <iostream>
 
-Graph::Graph()
+
+
+void Graph::Draw()
 {
-	int row;
-	int column;
-	int leftTop;
-	int rightTop;
-	int botLeft;
-	int botRight;
-}
+	// Test Graph Drawing
+	// ToDo: Replace this
+	{
+		char cha = 169;
 
-void Graph::Draw(int rows, int columns)
-{
-
+		// forming a simple graph
+		for (int i = 0; i < 5; i++)
+		{
+			for (int j = 0; j < 5; j++)
+			{
+				std::cout << cha;
+			}
+			std::cout << std::endl;
+		}
+	}
 }
 
 

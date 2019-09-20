@@ -8,14 +8,14 @@ void Graph::Draw()
 	// Test Graph Drawing
 	// ToDo: Replace this
 	{
-		char cha = 169;
-
+		char cha = 171;
+		
 		// forming a simple graph
-		for (int i = 0; i < 5; i++)
+		for (int i = 0; i < m_rows; i++)
 		{
-			for (int j = 0; j < 5; j++)
+			for (int j = 0; j < m_columns; j++)
 			{
-				std::cout << cha;
+				std::cout << cha << " ";
 			}
 			std::cout << std::endl;
 		}
@@ -25,5 +25,5 @@ void Graph::Draw()
 
 void Graph::Update()
 {
-
+	
 }

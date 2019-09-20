@@ -3,7 +3,8 @@
 
 Player::Player() : GameObject()
 {
-	id = 0;
+	posX = 0;
+	posY = 0;
 }
 
 void Player::Draw() 

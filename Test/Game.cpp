@@ -1,11 +1,13 @@
 #include "Game.h"
 #include <conio.h>
 #include <iostream>
+#include <Windows.h>
 
 using namespace std;
 
 Game::Game()
 {
+	m_graph = new Graph(6, 10);
     m_player = new Player();
 	m_enemy = new Enemy();
 	//GameObject go1* = new GameObject;
@@ -25,14 +27,15 @@ void Game::Draw()
 {
 	cout << "Drawing Game\n";
 	m_player->Draw();
-	Graph();
-	m_player->Update();
+	m_graph->Draw();
+	//m_player->Update();
 }
 
 void Game::Update()
 {
 	cout << "Updating Game\n";
 	m_player->Update();
+	m_graph->Update();
 }
 
 
@@ -43,13 +46,19 @@ void Game::Intro()
 
 
 	cout << "Oh look, there is a piece of candy\n";
+
+
+	// Play some beethoven
+	Beep(1568, 200);
+	Beep(1568, 200);
+	Beep(1568, 200);
+	Beep(1245, 1000);
+	Beep(1397, 200);
+	Beep(1397, 200);
+	Beep(1397, 200);
+	Beep(1175, 1000);
 }
 
-
-void Game::Graph()
-{
-
-}
 
 void Game::Battle()
 {

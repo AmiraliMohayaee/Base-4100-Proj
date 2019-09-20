@@ -9,6 +9,7 @@ public:
 	AsciiChars();
 	int GetCharID();
 	void DrawChar(int id);
+	void DrawCharTestTable();
 
 private:
 	// The assigned target to get for whenever a call is

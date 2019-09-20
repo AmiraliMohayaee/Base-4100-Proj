@@ -11,6 +11,6 @@ public:
 	void Update();
 
 private:
-	int id;
-	
+	int posX;
+	int posY;
 };

@@ -16,3 +16,19 @@ void Player::Update()
 {
 	std::cout << "Updating Player\n";
 }
+
+int Player::GetPlayerPos()
+{
+	return posX, posY;
+}
+
+void Player::SetPlayerPos(int x, int y)
+{
+	posX = x;
+	posY = y;
+}
+
+bool Player::CheckLifeState()
+{
+	return false;
+}

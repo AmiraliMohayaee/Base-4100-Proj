@@ -7,10 +7,10 @@ using namespace std;
 
 Game::Game()
 {
-	m_graph = new Graph(6, 10);
+	m_graph = new Graph();
     m_player = new Player();
 	m_enemy = new Enemy();
-	//GameObject go1* = new GameObject;
+	//GameObject m_go = &m_player;
 }
 
 Game::~Game()
@@ -26,16 +26,17 @@ void Game::Init()
 void Game::Draw()
 {
 	cout << "Drawing Game\n";
-	m_player->Draw();
 	m_graph->Draw();
-	//m_player->Update();
+	m_player->Draw();
+	m_player->Update();
 }
 
 void Game::Update()
 {
 	cout << "Updating Game\n";
-	m_player->Update();
 	m_graph->Update();
+	m_player->Update();
+	
 }
 
 
@@ -43,7 +44,6 @@ void Game::Intro()
 {
 	cout << "You enter a dark Dungeon.\n" <<
 		"It's dark and smelly here\n";
-
 
 	cout << "Oh look, there is a piece of candy\n";
 

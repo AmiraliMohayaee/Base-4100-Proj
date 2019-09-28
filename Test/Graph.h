@@ -2,26 +2,30 @@
 
 #include <vector>
 #include <string.h>
-#include <array>
+#include <map>
 
 
 class Graph
 {
 public:
-	Graph()
-	{ };
+	Graph();
+	//Graph(int rows, int columns) : m_rows(rows), m_columns(columns) 
+	//{ };
 
 	void Draw(/*int borders, int walls*/);
 	void Update();
 
 
 private:
-	enum Directions { UP, DOWN, LEFT, RIGHT };
+	enum DIRECTION { UP, DOWN, LEFT, RIGHT };
+	enum TILES { VERTBORD = 186, HORBORD = 205, FLOOR = 176, 
+		TOPRIGHT = 187, TOPLEFT = 201, BOTTOMRIGHT = 188,
+		BOTTOMLEFT = 200, PLAYER = 173,
+		ENEMY = 158, DOOR = 221, HORWALL = 196,
+		VERWALL = 179};
 
-	// To-Do: Figure out how to make a more dynamic
-	// method of passing these through
-	const int m_rows = 6;
-	const int m_columns = 6;
+	int m_rows;
+	int m_columns;
 
 	unsigned const char m_diagBorder = 186;
 	unsigned const char m_horBorder = 205;
@@ -36,12 +40,15 @@ private:
 	unsigned const char m_horWall = 196;
 	unsigned const char m_verWall = 179;
 
+
+	std::map<char, int, int> m_map;
+
 	// Creating the array on the heap for more
 	// dynamic access
 	//int* m_map = new int[23][77];
-	std::array<std::array<int, 6>, 6> m_map;
+	//std::array<std::array<int, 6>, 6> m_map;
 	//m_map* = new MultiDimArray;
-	//char *m_map = new char[][];
+	
 	//std::vector<m_map> 
 
 };

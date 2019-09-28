@@ -12,7 +12,7 @@ int main()
 	ConsoleResize();
 	Game* game = new Game();
 
-	game->Intro();
+	//game->Intro();
 	game->Init();
 	game->Draw();
 	game->Update();

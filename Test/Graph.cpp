@@ -22,7 +22,7 @@ void Graph::Draw()
 			case TOPLEFT: 
 				if (m_rows == 0 && m_columns == 0)
 					cout << (char)TOPLEFT;
-					//m_map.insert[]
+					m_map[m_rows, m_columns] = TOPLEFT;
 				
 			case TOPRIGHT:
 				if (m_rows == 0 && m_columns == 11)
@@ -64,6 +64,7 @@ void Graph::Draw()
 		cout << " " << endl;
 	}
 	cout << " The map array has " << sizeof(m_map) << " elements\n";
+	cout << "Element 3, 3 in map is " << m_map[3, 3] << " \n";
 }
 
 

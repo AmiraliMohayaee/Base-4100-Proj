@@ -22,33 +22,39 @@ void Graph::Draw()
 			case TOPLEFT: 
 				if (m_rows == 0 && m_columns == 0)
 					cout << (char)TOPLEFT;
-					m_map[m_rows, m_columns] = TOPLEFT;
+				m_map[m_rows * m_columns] = (char)TOPLEFT;
 				
 			case TOPRIGHT:
 				if (m_rows == 0 && m_columns == 11)
 					cout << (char)TOPRIGHT;
+				m_map[m_rows * m_columns] = (char)TOPRIGHT;
 				
 			case BOTTOMLEFT:
 				if (m_rows == 11 && m_columns == 0)
 					cout << (char)BOTTOMLEFT;
+				m_map[m_rows * m_columns] = (char)BOTTOMLEFT;
 				
 			case BOTTOMRIGHT:
 				if (m_rows == 11 && m_columns == 11)
 					cout << (char)BOTTOMRIGHT;
+				m_map[m_rows * m_columns] = (char)BOTTOMRIGHT;
 	
 			case HORBORD:
 				if ((m_rows == 0 || m_rows == 11) && 
 					(m_columns > 0 && m_columns < 11))
 					cout << (char)HORBORD;
+				m_map[m_rows * m_columns] = (char)HORBORD;
 
 			case VERTBORD:
 				if ((m_rows > 0 && m_rows < 11) && 
 					(m_columns == 0 || m_columns == 11))
 					cout << (char)VERTBORD;
+				m_map[m_rows * m_columns] = (char)VERTBORD;
 
 			case PLAYER:
 				if (m_rows == 3 && m_columns == 3)
 					cout << (char)PLAYER;
+				m_map[m_rows * m_columns] = (char)PLAYER;
 
 			//case FLOOR:
 			//	if (!(i == 0 || j == 0) && !(i == 11 || j == 11) &&
@@ -56,7 +62,7 @@ void Graph::Draw()
 			//		cout << (char)FLOOR;
 
 			default:
-				//cout << "Cannot find correct Tile\n";
+				cout << "Cannot find correct Tile\n";
 				break;
 			}
 			cout << " ";
@@ -64,7 +70,7 @@ void Graph::Draw()
 		cout << " " << endl;
 	}
 	cout << " The map array has " << sizeof(m_map) << " elements\n";
-	cout << "Element 3, 3 in map is " << m_map[3, 3] << " \n";
+	cout << "Element 3, 3 in map is " << m_map[3 * 3] << " \n";
 }
 
 

@@ -41,7 +41,7 @@ private:
 	unsigned const char m_verWall = 179;
 
 
-	std::map<int, int, char> m_map;
+	std::map<int, char> m_map;
 
 	// Creating the array on the heap for more
 	// dynamic access

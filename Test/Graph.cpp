@@ -62,7 +62,7 @@ void Graph::Draw()
 			//		cout << (char)FLOOR;
 
 			default:
-				cout << "Cannot find correct Tile\n";
+				//cout << "Cannot find correct Tile\n";
 				break;
 			}
 			cout << " ";

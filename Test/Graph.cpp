@@ -56,10 +56,25 @@ void Graph::Draw()
 					cout << (char)PLAYER;
 				m_map[m_rows * m_columns] = (char)PLAYER;
 
-			//case FLOOR:
-			//	if (!(i == 0 || j == 0) && !(i == 11 || j == 11) &&
-			//		!(i == 0 || j == 11) && !(i == 11 || i == 0))
-			//		cout << (char)FLOOR;
+			case DOOR:
+				if (m_rows == 3 && m_columns == 5)
+					cout << (char)DOOR;
+				m_map[m_rows * m_columns] = (char)DOOR;
+
+			//case HORWALL:
+			//	if ()
+			//		cout << (char)HORWALL;
+
+			//case VERWALL:
+			//	if ()
+			//		cout << (char)VERWALL;
+
+			case FLOOR:
+				//if (!(DOOR || PLAYER || VERTBORD || HORBORD || BOTTOMRIGHT || BOTTOMLEFT || 
+				//	TOPRIGHT || TOPLEFT))
+				if (!(m_rows == 0 || m_columns == 0) && !(m_rows == 11 || m_columns == 11) &&
+					!(m_rows == 0 || m_columns == 11) && !(m_rows == 11 || m_rows == 0))
+					cout << (char)FLOOR;
 
 			default:
 				//cout << "Cannot find correct Tile\n";

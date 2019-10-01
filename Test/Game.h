@@ -3,6 +3,7 @@
 #include "Player.h"
 #include "Enemy.h"
 #include "Graph.h"
+#include "ClearScreen.h"
 
 
 class Game

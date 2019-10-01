@@ -27,20 +27,6 @@ private:
 	int m_rows;
 	int m_columns;
 
-	unsigned const char m_diagBorder = 186;
-	unsigned const char m_horBorder = 205;
-	unsigned const char m_floor = 176;
-	unsigned const char m_topRight = 187;
-	unsigned const char m_topLeft = 201;
-	unsigned const char m_bottomRight = 188;
-	unsigned const char m_bottomLeft = 200;
-	unsigned const char m_player = 173;
-	unsigned const char m_enemy = 158;
-	unsigned const char m_door = 221;
-	unsigned const char m_horWall = 196;
-	unsigned const char m_verWall = 179;
-
-
 	std::map<int, char> m_map;
 
 	// Creating the array on the heap for more

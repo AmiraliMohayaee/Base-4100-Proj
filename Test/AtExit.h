@@ -14,6 +14,6 @@ void AtExit()
 {
 	cin.clear();
 	cin.ignore(cin.rdbuf()->in_avail());
-	cout << "Press Enter key to End..." << endl;
+	cout << "Press Enter key to continue..." << endl;
 	cin.get();
 }

@@ -12,12 +12,23 @@ int main()
 	ConsoleResize();
 	Game* game = new Game();
 
-	//game->Intro();
+	game->Intro();
 	game->Init();
 	game->Draw();
 	game->Update();
 
+
+#ifdef DEBUG
 	AtExit();
 	ClearScreen();
 	AtExit();
+#endif // DEBUG
+
+#ifdef RELEASE
+	system("pasue");
+	system("cls");
+	system("pause");
+#endif
+
+
 }

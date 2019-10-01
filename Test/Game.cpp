@@ -1,7 +1,8 @@
 #include "Game.h"
+#include "AtExit.h"
 #include <conio.h>
 #include <iostream>
-#include <Windows.h>
+
 
 using namespace std;
 
@@ -42,11 +43,54 @@ void Game::Update()
 
 void Game::Intro()
 {
-	cout << "You enter a dark Dungeon.\n" <<
-		"It's dark and smelly here\n";
+	//cout << "You enter a dark Dungeon.\n" <<
+	//	"It's dark and smelly here\n";
 
-	cout << "Oh look, there is a piece of candy\n";
+	cout << "NYAHAHAHAHAHAHAHAAAA\n";
 
+	cout << R"(
+                                                                                          
+         `.  ``                                                                           
+      .. -`-`:..                                   ` `                                    
+      -.-:-/-/:---                           ``.....``...`                                
+    -.-::::.::--:-`                        `.````````...:-.                               
+    .:::.:/-+::.:-`                      `.`````...````.//:.                              
+     .-:+:+.:--:::                       ..--.```....-:::--:                              
+      .::--:::/:-.                       .-/:``-:://+yyyys/-.                             
+       `-/::+:/:-                        `-:.:yyyyo`-osso/.`--                            
+        `-/:+-//`                         `-.sssss+-+//----::.                            
+          .-:-./.                          -...-:--oo+:``-:/-                             
+           -.+:-/`                         .--::-``.-----::-:                             
+           `-:/-::                          ``-/:-------:--.:                             
+            .-/:-/-                 ``.``      :--------...-`                             
+             -:/:-/.            ``..```-..`````.::--..``.-.`                              
+              -///:/`      ``....--::///-:/:-:-::://:--:-.                                
+              `:/o-/-````.---:::::-.../:/o+.:+////::::::::.`        ``                    
+               .-/:-/..--:::-.``      `://:/::/+o/..../+///:--.``...``.`                  
+                .-/-///:-.`            -./++:///o/.../o+://-:o+/:-::-.`..`                
+                 .:/:-`               .--::///+os:..:+//::/:/oo/:-:::/:-...`              
+                   ``                ``---.....-:..`//:---:-.:-..``  `.:/:---`            
+                                                                        `.::---`          
+                                                                           `-::-..``      
+                                                                             `:/:---:.    
+                                                                         ``.---:/:---/    
+                                                                     `.--://::/::--::.    
+                                                               ``..--/////::::::-.``      
+                                                            `.--:/-::::::::-.`            
+                                                       `...-:-///::/--..`                 
+                                                      ..::-:/::///-:                      
+                                                      `-:/-..:-::/-:                      
+                                                       -/:/:/./--:-:`                     
+                                                     `--.-:..::-/-/-                      
+                                                    .--/:`    ``..`                       
+                                                   `-.-.                                  
+                                                   `.`                                    
+                                                                                          
+)"
+	<< '\n';
+
+	cout << "WELLCOME TO THE DUNGEON OF DOOM, FOOLISH MORTAL \n"
+		<< "PREPARE FOR YOUR DOOOOM \n";
 
 	// Play some beethoven
 	Beep(1568, 200);
@@ -57,6 +101,19 @@ void Game::Intro()
 	Beep(1397, 200);
 	Beep(1397, 200);
 	Beep(1175, 1000);
+
+	AtExit();
+	cout << endl;
+
+
+	#ifdef DEBUG
+		ClearScreen();
+	#endif	// DEBUG
+
+
+	#ifdef RELEASE
+		system("cls");
+	#endif // RELEASE
 }
 
 

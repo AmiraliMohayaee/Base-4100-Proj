@@ -12,7 +12,8 @@ public:
 	void Play();
 
 private:
-	enum KEYS { C = 1000, D , E, F, G, A, B };
+	enum KEYS { C = 1000, D = 1500 , E = 2000, 
+		F, G, A, B };
 
 
 };

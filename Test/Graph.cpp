@@ -89,32 +89,31 @@ void Graph::Draw()
 						, DOOR));
 				}
 
+			case VERWALL:
+				if ((m_columns > 0 && m_columns == 5) && (m_rows == 5))
+				{
+					cout << (char)VERWALL;
+					m_map.insert(std::pair<int, char>((m_rows * m_columns)
+						, VERWALL));
+				}
+
 			case HORWALL:
-				if ((m_columns > 0 && m_columns == 7))
+				if ((m_rows > 0 && m_rows < 7) && (m_columns == 7))
 				{
 					cout << (char)HORWALL;
 					m_map.insert(std::pair<int, char>((m_rows * m_columns)
 						, HORWALL));
 				}
 
-			case VERWALL:
-			//	if ((m_rows > 0 && m_rows < 7) && (m_columns == 7))
-			//	{
-			//		cout << (char)VERWALL;
-			//		m_map.insert(std::pair<int, char>((m_rows * m_columns)
-			//			, VERWALL));
-			//	}
-
 			case FLOOR:
-				//if (!(DOOR || PLAYER || VERTBORD || HORBORD || BOTTOMRIGHT || BOTTOMLEFT || 
-				//	TOPRIGHT || TOPLEFT))
-			{
 				if (!(m_rows == 0 || m_columns == 0) && !(m_rows == 11 || m_columns == 11) &&
-					!(m_rows == 0 || m_columns == 11) && !(m_rows == 11 || m_rows == 0))
+					!(m_rows == 0 || m_columns == 11) && !(m_rows == 11 || m_rows == 0) &&
+					!(m_rows == 5 || m_columns == 7))
+				{
 					cout << (char)FLOOR;
-					m_map.insert(std::pair<int, char>((m_rows * m_columns)
+						m_map.insert(std::pair<int, char>((m_rows * m_columns)
 					, FLOOR));
-			}
+				}
 
 			default:
 				//cout << "Cannot find correct Tile\n";
@@ -151,6 +150,8 @@ void Graph::CheckElements()
 	}
 }
 
+// To-Do: Allow for swapping of keys and inner elements of
+// two map elements
 void Graph::SwapElements(int first, int second)
 {
 

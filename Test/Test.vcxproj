@@ -130,6 +130,7 @@
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Graph.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Piano.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="UserDetails.cpp" />
   </ItemGroup>
@@ -143,6 +144,7 @@
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="Graph.h" />
     <ClInclude Include="MultiDimArray.h" />
+    <ClInclude Include="Piano.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="UserDetails.h" />
   </ItemGroup>

@@ -15,6 +15,7 @@ public:
 	void Draw(/*int borders, int walls*/);
 	void Update();
 
+	void CheckElements();
 
 private:
 	enum DIRECTION { UP, DOWN, LEFT, RIGHT };

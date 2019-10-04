@@ -1,7 +1,6 @@
 #include "Graph.h"
 #include <iostream>
 
-
 using namespace std;
 
 Graph::Graph()
@@ -61,13 +60,13 @@ void Graph::Draw()
 					cout << (char)DOOR;
 				m_map[m_rows * m_columns] = (char)DOOR;
 
-			//case HORWALL:
-			//	if ()
-			//		cout << (char)HORWALL;
+			case HORWALL:
+//				if ()
+					//cout << (char)HORWALL;
 
-			//case VERWALL:
-			//	if ()
-			//		cout << (char)VERWALL;
+			case VERWALL:
+				if ((m_rows > 0 && m_rows < 7) && (m_columns == 7))
+					cout << (char)VERWALL;
 
 			case FLOOR:
 				//if (!(DOOR || PLAYER || VERTBORD || HORBORD || BOTTOMRIGHT || BOTTOMLEFT || 
@@ -84,12 +83,25 @@ void Graph::Draw()
 		}
 		cout << " " << endl;
 	}
-	cout << " The map array has " << sizeof(m_map) << " elements\n";
-	cout << "Element 3, 3 in map is " << m_map[3 * 3] << " \n";
+
+	//CheckElements();
 }
 
 
 void Graph::Update()
 {
 	
+}
+
+void Graph::CheckElements()
+{
+	// Iterating through the map to individually test and see
+	// if it's correctly populated
+	for (std::map<int, char>::iterator it = m_map.begin();
+		it != m_map.end(); it++)
+	{
+		cout << " The map array has " << m_map.size() << " elements\n";
+		cout << "Element " << it->first << " in map is a "
+			<< it->second << " \n";
+	}
 }

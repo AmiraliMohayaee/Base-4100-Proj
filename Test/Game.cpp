@@ -1,7 +1,10 @@
 #include "Game.h"
-#include "AtExit.h"
 #include <conio.h>
 #include <iostream>
+
+//#ifdef _DEBUG
+#include "AtExit.h"
+//#endif
 
 
 using namespace std;
@@ -16,7 +19,9 @@ Game::Game()
 
 Game::~Game()
 {
+	delete m_graph;
 	delete m_player;
+	delete m_enemy;
 }
 
 void Game::Init()
@@ -37,7 +42,6 @@ void Game::Update()
 	cout << "Updating Game\n";
 	m_graph->Update();
 	m_player->Update();
-	
 }
 
 
@@ -102,16 +106,13 @@ void Game::Intro()
 	Beep(1397, 200);
 	Beep(1175, 1000);
 
-	AtExit();
 	cout << endl;
 
-
-	#ifdef DEBUG
+	#ifdef _DEBUG
+		AtExit();
 		ClearScreen();
-	#endif	// DEBUG
-
-
-	#ifdef RELEASE
+	#else
+		system("pause");
 		system("cls");
 	#endif // RELEASE
 }

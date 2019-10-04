@@ -18,17 +18,13 @@ int main()
 	game->Update();
 
 
-#ifdef DEBUG
+#ifdef _DEBUG
 	AtExit();
 	ClearScreen();
 	AtExit();
-#endif // DEBUG
-
-#ifdef RELEASE
+#else
 	system("pasue");
 	system("cls");
 	system("pause");
 #endif
-
-
 }

@@ -4,7 +4,7 @@ UserDetail::UserDetail()
 {
 }
 
-std::string UserDetail::GetName(std::string name)
+std::string UserDetail::GetName(std::string& name)
 {
 	return std::string();
 }

@@ -16,9 +16,12 @@ public:
 	void Update();
 
 	void CheckElements();
+	void SwapElements(int first, int second);
 
 private:
 	enum DIRECTION { UP, DOWN, LEFT, RIGHT };
+
+	// Tiles use ascii reference codes for what to draw
 	enum TILES { VERTBORD = 186, HORBORD = 205, FLOOR = 176, 
 		TOPRIGHT = 187, TOPLEFT = 201, BOTTOMRIGHT = 188,
 		BOTTOMLEFT = 200, PLAYER = 173,
@@ -28,14 +31,8 @@ private:
 	int m_rows;
 	int m_columns;
 
+	// Container for keeping the tile elements and
+	// their references
 	std::map<int, char> m_map;
-
-	// Creating the array on the heap for more
-	// dynamic access
-	//int* m_map = new int[23][77];
-	//std::array<std::array<int, 6>, 6> m_map;
-	//m_map* = new MultiDimArray;
-	
-	//std::vector<m_map> 
 
 };

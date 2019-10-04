@@ -9,6 +9,8 @@
 // Creating an array template class so that it's exception
 // safe and won't require manually deleting everytime
 
+// This is not used for this project yet
+
 template<typename T>
 class MultiDimArray
 {

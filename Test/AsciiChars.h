@@ -3,17 +3,21 @@
 
 #include <iostream>
 
+
 class AsciiChars
 {
 public:
 	AsciiChars();
 	int GetCharID();
 	void DrawChar(int id);
+
+	// Prints all available ascii elements
 	void DrawCharTestTable();
 
 private:
-	// The assigned target to get for whenever a call is
-	// made to aquire an ascii char object
+	// The assigned target if so the correct 
+	// ascii character from the table is called
+	// retains its own ID
 	unsigned int m_charTarget;
 
 };

@@ -47,9 +47,6 @@ void Game::Update()
 
 void Game::Intro()
 {
-	//cout << "You enter a dark Dungeon.\n" <<
-	//	"It's dark and smelly here\n";
-
 	cout << "NYAHAHAHAHAHAHAHAAAA\n";
 
 	cout << R"(

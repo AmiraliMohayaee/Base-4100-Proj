@@ -30,6 +30,7 @@ void ConsoleResize()
 	
 	// Does a loop which goes through a loop of characters up to
 	// 100 chars
+	// This function is lot less nicer
 	//for (int j = 0; j < 100; ++j)
 	//{
 	//	for (int i = 0x41; i < 0x5B; ++i)

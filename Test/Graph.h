@@ -18,6 +18,8 @@ public:
 	void CheckElements();
 	void SwapElements(int first, int second);
 
+	void PopulateGraph();
+
 private:
 	enum DIRECTION { UP, DOWN, LEFT, RIGHT };
 

@@ -92,5 +92,11 @@
     <ClInclude Include="Piano.h">
       <Filter>Header Files\Objects</Filter>
     </ClInclude>
+    <ClInclude Include="NonCopyable.h">
+      <Filter>Header Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="Singleton.h">
+      <Filter>Header Files\Data</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

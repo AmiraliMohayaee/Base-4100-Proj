@@ -16,7 +16,9 @@ public:
 	void Update();
 
 	void CheckElements();
-	void SwapElements(int first, int second);
+	int SetMapElement(int element);
+	int SetMapElement(int rows, int columns);
+	void SwapElements(int& first, int& second);
 
 	void PopulateGraph();
 

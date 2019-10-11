@@ -28,6 +28,9 @@
     <Filter Include="Source Files\Objects">
       <UniqueIdentifier>{473cd1ac-77f2-4471-a0f9-e204a5ce9dd3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Screen">
+      <UniqueIdentifier>{110b5c55-e175-4802-9a90-11106a3421a4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -54,6 +57,9 @@
     <ClCompile Include="Piano.cpp">
       <Filter>Source Files\Objects</Filter>
     </ClCompile>
+    <ClCompile Include="ScreenManager.cpp">
+      <Filter>Source Files\Screen</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Enemy.h">
@@ -77,12 +83,6 @@
     <ClInclude Include="MultiDimArray.h">
       <Filter>Header Files\Data</Filter>
     </ClInclude>
-    <ClInclude Include="AtExit.h">
-      <Filter>Header Files\Screen</Filter>
-    </ClInclude>
-    <ClInclude Include="ClearScreen.h">
-      <Filter>Header Files\Screen</Filter>
-    </ClInclude>
     <ClInclude Include="ConsoleResize.h">
       <Filter>Header Files\Screen</Filter>
     </ClInclude>
@@ -97,6 +97,9 @@
     </ClInclude>
     <ClInclude Include="Singleton.h">
       <Filter>Header Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenManager.h">
+      <Filter>Header Files\Screen</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

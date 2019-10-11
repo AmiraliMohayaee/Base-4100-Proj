@@ -14,9 +14,5 @@ public:
 	bool CheckLifeState();
 
 private:
-	int posX;
-	int posY;
 	unsigned int* m_health;
-
-	bool m_isAlive;
 };

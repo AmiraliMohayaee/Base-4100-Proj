@@ -2,9 +2,6 @@
 #include <conio.h>
 #include <iostream>
 
-//#ifdef _DEBUG
-#include "AtExit.h"
-//#endif
 
 
 using namespace std;
@@ -15,6 +12,8 @@ Game::Game()
     m_player = new Player();
 	m_enemy = new Enemy();
 	//GameObject m_go = &m_player;
+
+	m_screen = new ScreenManager();
 }
 
 Game::~Game()
@@ -29,13 +28,13 @@ void Game::Init()
 	cout << "initializing Game\n";
 }
 
-void Game::Draw()
-{
-	cout << "Drawing Game\n";
-	m_graph->Draw();
-	m_player->Draw();
-	m_player->Update();
-}
+//void Game::Draw()
+//{
+//	cout << "Drawing Game\n";
+//	m_graph->Draw();
+//	m_player->Draw();
+//	m_player->Update();
+//}
 
 void Game::Update()
 {
@@ -106,8 +105,8 @@ void Game::Intro()
 	cout << endl;
 
 	#ifdef _DEBUG
-		AtExit();
-		ClearScreen();
+		m_screen->AtExit();
+		m_screen->ClearScreen();
 	#else
 		system("pause");
 		system("cls");

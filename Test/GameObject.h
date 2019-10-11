@@ -8,4 +8,6 @@ protected:
 	virtual void Update() = 0;
 
 	int posX, posY;
+
+	bool m_isAlive;
 };

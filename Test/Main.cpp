@@ -2,26 +2,26 @@
 #include <math.h>
 #include "Game.h"
 #include "Player.h"
-#include "AtExit.h"
-#include "ClearScreen.h"
-#include "ConsoleResize.h"
+#include "ScreenManager.h"
 
 
 int main()
 {
-	ConsoleResize();
 	Game* game = new Game();
+	ScreenManager* screen = new ScreenManager();
+
+	screen->ConsoleResize(800, 800);
 
 	game->Intro();
 	game->Init();
-	game->Draw();
+	//game->Draw();
 	game->Update();
 
 
 #ifdef _DEBUG
-	AtExit();
-	ClearScreen();
-	AtExit();
+	screen->AtExit();
+	screen->ClearScreen();
+	screen->AtExit();
 #else
 	system("pasue");
 	system("cls");

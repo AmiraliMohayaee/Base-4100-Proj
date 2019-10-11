@@ -78,7 +78,8 @@
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
-      <ForceFileOutput>MultiplyDefinedSymbolOnly</ForceFileOutput>
+      <ForceFileOutput>
+      </ForceFileOutput>
       <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
@@ -132,12 +133,11 @@
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Piano.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="ScreenManager.cpp" />
     <ClCompile Include="UserDetails.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AsciiChars.h" />
-    <ClInclude Include="AtExit.h" />
-    <ClInclude Include="ClearScreen.h" />
     <ClInclude Include="ConsoleResize.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="Game.h" />
@@ -147,6 +147,7 @@
     <ClInclude Include="Piano.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="NonCopyable.h" />
+    <ClInclude Include="ScreenManager.h" />
     <ClInclude Include="Singleton.h" />
     <ClInclude Include="UserDetails.h" />
   </ItemGroup>

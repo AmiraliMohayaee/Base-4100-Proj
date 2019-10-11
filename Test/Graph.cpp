@@ -1,5 +1,6 @@
 #include "Graph.h"
 #include <iostream>
+#include <math.h>
 
 
 using namespace std;
@@ -158,11 +159,26 @@ void Graph::CheckElements()
 	}
 }
 
-// To-Do: Allow for swapping of keys and inner elements of
-// two map elements
-void Graph::SwapElements(int first, int second)
+int Graph::SetMapElement(int element)
 {
+	m_rows = sqrt(element);
+	while (element % m_rows != 0)
+		m_rows = m_rows - 1;
+	m_columns = element / m_rows;
 
+	return element;
 }
 
+int Graph::SetMapElement(int rows, int columns)
+{
+	int element = 0;
+	element = (m_rows * (element)) + (m_columns + 1);
+	return element;
+}
 
+// To-Do: Allow for swapping of keys and inner elements of
+// two map elements
+void Graph::SwapElements(int& first, int& second)
+{
+	
+}

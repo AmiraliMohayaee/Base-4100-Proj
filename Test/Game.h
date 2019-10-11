@@ -3,7 +3,7 @@
 #include "Player.h"
 #include "Enemy.h"
 #include "Graph.h"
-#include "ClearScreen.h"
+#include "ScreenManager.h"
 
 
 class Game
@@ -13,7 +13,7 @@ public:
 	~Game();
 
 	void Init();
-	void Draw();
+	//void Draw();
 	void Update();
 
 	void Intro();
@@ -22,6 +22,8 @@ public:
 	
 	
 private:
+	ScreenManager* m_screen;
+
 	GameObject* m_go;
 	Player* m_player;
 	Enemy* m_enemy;

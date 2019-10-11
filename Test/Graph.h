@@ -30,7 +30,7 @@ private:
 		TOPRIGHT = 187, TOPLEFT = 201, BOTTOMRIGHT = 188,
 		BOTTOMLEFT = 200, PLAYER = 173,
 		ENEMY = 158, DOOR = 221, HORWALL = 196,
-		VERWALL = 179};
+		VERWALL = 179 };
 
 	int m_rows;
 	int m_columns;

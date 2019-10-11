@@ -101,5 +101,11 @@
     <ClInclude Include="ScreenManager.h">
       <Filter>Header Files\Screen</Filter>
     </ClInclude>
+    <ClInclude Include="GameState.h">
+      <Filter>Header Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="StateManager.h">
+      <Filter>Header Files\Data</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

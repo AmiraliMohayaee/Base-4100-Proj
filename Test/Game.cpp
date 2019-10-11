@@ -3,7 +3,6 @@
 #include <iostream>
 
 
-
 using namespace std;
 
 Game::Game()
@@ -14,6 +13,8 @@ Game::Game()
 	//GameObject m_go = &m_player;
 
 	m_screen = new ScreenManager();
+
+	m_whileGameRunning = true;
 }
 
 Game::~Game()
@@ -28,19 +29,38 @@ void Game::Init()
 	cout << "initializing Game\n";
 }
 
-//void Game::Draw()
-//{
-//	cout << "Drawing Game\n";
-//	m_graph->Draw();
-//	m_player->Draw();
-//	m_player->Update();
-//}
+void Game::Draw()
+{
+	cout << "Drawing Game\n";
+	m_graph->Draw();
+	m_player->Draw();
+	m_player->Update();
+}
+
+void Game::DrawGraph()
+{
+	int graph[12][12] = {};
+
+	for (int i = 0; i < 12; i++)
+	{
+		for (int j = 0; j < 12; j++)
+		{
+			//std::cout << m_graph[i][j] << std::endl;
+		}
+	}
+
+}
 
 void Game::Update()
 {
-	cout << "Updating Game\n";
-	m_graph->Update();
-	m_player->Update();
+	while (m_whileGameRunning)
+	{
+		cout << "Updating Game\n";
+		m_graph->Draw();
+		m_player->Update();
+		Sleep(1000);
+		m_screen->ClearScreen();
+	}
 }
 
 
@@ -104,13 +124,9 @@ void Game::Intro()
 
 	cout << endl;
 
-	#ifdef _DEBUG
-		m_screen->AtExit();
-		m_screen->ClearScreen();
-	#else
-		system("pause");
-		system("cls");
-	#endif // RELEASE
+
+	m_screen->AtExit();
+	m_screen->ClearScreen();
 }
 
 

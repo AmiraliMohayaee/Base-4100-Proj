@@ -13,7 +13,9 @@ public:
 	~Game();
 
 	void Init();
-	//void Draw();
+	void Draw();
+	void DrawGraph();
+
 	void Update();
 
 	void Intro();
@@ -22,10 +24,13 @@ public:
 	
 	
 private:
+
 	ScreenManager* m_screen;
 
 	GameObject* m_go;
 	Player* m_player;
 	Enemy* m_enemy;
 	Graph* m_graph;
+
+	bool m_whileGameRunning;
 };

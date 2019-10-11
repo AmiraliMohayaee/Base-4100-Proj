@@ -18,13 +18,7 @@ int main()
 	game->Update();
 
 
-#ifdef _DEBUG
 	screen->AtExit();
 	screen->ClearScreen();
 	screen->AtExit();
-#else
-	system("pasue");
-	system("cls");
-	system("pause");
-#endif
 }

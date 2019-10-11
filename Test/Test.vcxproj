@@ -149,6 +149,8 @@
     <ClInclude Include="NonCopyable.h" />
     <ClInclude Include="ScreenManager.h" />
     <ClInclude Include="Singleton.h" />
+    <ClInclude Include="GameState.h" />
+    <ClInclude Include="StateManager.h" />
     <ClInclude Include="UserDetails.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

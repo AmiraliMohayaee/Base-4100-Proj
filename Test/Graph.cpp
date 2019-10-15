@@ -161,7 +161,7 @@ void Graph::CheckElements()
 
 int Graph::SetMapElement(int element)
 {
-	m_rows = sqrt(element);
+	m_rows = (int)sqrt(element);
 	while (element % m_rows != 0)
 		m_rows = m_rows - 1;
 	m_columns = element / m_rows;

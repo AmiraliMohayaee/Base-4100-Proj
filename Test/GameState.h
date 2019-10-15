@@ -11,7 +11,9 @@ public:
 	void Draw();
 	void Update();
 
-	void EventHandling();
+	// ToDo: Create Event Handler
+	// to the game engine
+	//void EventHandling();
 
 
 private:

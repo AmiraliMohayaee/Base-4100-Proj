@@ -21,10 +21,9 @@ public:
 	void Intro();
 
 	void Battle();
-	
+
 	
 private:
-
 	ScreenManager* m_screen;
 
 	GameObject* m_go;

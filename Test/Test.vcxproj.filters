@@ -31,6 +31,12 @@
     <Filter Include="Source Files\Screen">
       <UniqueIdentifier>{110b5c55-e175-4802-9a90-11106a3421a4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Data\StateManagement">
+      <UniqueIdentifier>{7edddbe9-e546-4963-bab3-f310168aa0fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Data\Event Management">
+      <UniqueIdentifier>{203a603f-08e9-49cc-ab6b-d6b06748ff21}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -59,6 +65,9 @@
     </ClCompile>
     <ClCompile Include="ScreenManager.cpp">
       <Filter>Source Files\Screen</Filter>
+    </ClCompile>
+    <ClCompile Include="EventHandler.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -101,11 +110,17 @@
     <ClInclude Include="ScreenManager.h">
       <Filter>Header Files\Screen</Filter>
     </ClInclude>
-    <ClInclude Include="GameState.h">
+    <ClInclude Include="Timer.h">
       <Filter>Header Files\Data</Filter>
     </ClInclude>
+    <ClInclude Include="GameState.h">
+      <Filter>Header Files\Data\StateManagement</Filter>
+    </ClInclude>
     <ClInclude Include="StateManager.h">
-      <Filter>Header Files\Data</Filter>
+      <Filter>Header Files\Data\StateManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="EventHandler.h">
+      <Filter>Header Files\Data\Event Management</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

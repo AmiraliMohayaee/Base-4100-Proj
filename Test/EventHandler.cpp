@@ -7,7 +7,7 @@ EventHandler::EventHandler()
 
 bool EventHandler::SetKeyEvent(int &keyEvent)
 {
-	//if (SetKeyboardState(VK_SPACE))
+	if (SetKeyboardState(*m_event))
 	{
 
 	}

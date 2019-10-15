@@ -14,7 +14,7 @@ Game::Game()
 
 	m_screen = new ScreenManager();
 
-	m_whileGameRunning = true;
+	m_whileGameRunning = false;
 }
 
 Game::~Game()
@@ -53,11 +53,12 @@ void Game::DrawGraph()
 
 void Game::Update()
 {
-	while (m_whileGameRunning)
+	while (!m_whileGameRunning)
 	{
 		cout << "Updating Game\n";
-		m_graph->Draw();
-		m_player->Update();
+		//m_graph->Draw();
+		//m_player->Update();
+		DrawGraph();
 		Sleep(1000);
 		m_screen->ClearScreen();
 	}

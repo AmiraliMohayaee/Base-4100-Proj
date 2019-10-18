@@ -15,6 +15,8 @@ Game::Game()
 	m_screen = new ScreenManager();
 
 	m_whileGameRunning = false;
+
+	
 }
 
 Game::~Game()

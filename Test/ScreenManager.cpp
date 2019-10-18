@@ -3,10 +3,10 @@
 
 void ScreenManager::AtExit()
 {
-	cin.clear();
-	cin.ignore(cin.rdbuf()->in_avail());
-	cout << "Press Enter key to continue..." << endl;
-	cin.get();
+	std::cin.clear();
+	std::cin.ignore(std::cin.rdbuf()->in_avail());
+	std::cout << "Press Enter key to continue..." << std::endl;
+	std::cin.get();
 }
 
 void ScreenManager::ClearScreen()

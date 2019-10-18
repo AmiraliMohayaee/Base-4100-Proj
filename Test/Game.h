@@ -8,12 +8,15 @@
 #include "Singleton.h"
 
 
-
-class Game //: public NonCopyable
+class Game : public NonCopyable
 {
-public:
+
+private:
+
 	Game();
 	~Game();
+
+public:
 
 	void Init();
 	void Draw();
@@ -24,6 +27,12 @@ public:
 	void Intro();
 
 	void Battle();
+
+	static Game* GetInstance()
+	{
+		static Game* s_gameInstance = new Game;
+		return s_gameInstance;
+	}
 
 	
 private:

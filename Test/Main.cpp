@@ -6,17 +6,17 @@
 
 int main()
 {
-	Game* game = new Game;
-	ScreenManager* screen = new ScreenManager();
+	Game g;
+	//ScreenManager* screen = new ScreenManager();
 
-	screen->ConsoleResize(800, 800);
+	//screen->ConsoleResize(800, 800);
 
-	game->Intro();
-	game->Init();
-	//game->Draw();
-	game->Update();
-	
-	screen->AtExit();
-	screen->ClearScreen();
-	screen->AtExit();
+	//Game::GetInstance()->Intro();
+	//game->Init();
+	////game->Draw();
+	//game->Update();
+	//
+	//screen->AtExit();
+	//screen->ClearScreen();
+	//screen->AtExit();
 }

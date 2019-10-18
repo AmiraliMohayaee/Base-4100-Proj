@@ -3,20 +3,24 @@
 #include "NonCopyable.h"
 
 
-class Singleton //: public NonCopyable
+class Singleton : public NonCopyable
 {
 public:
-	~Singleton()
+	/*~Singleton()
 	{
 		s_singletonInstance = false;
-	}
+	}*/
 	
-	//static Singleton* GetInstance(); 
+	static Singleton* GetInstance()
+	{
+		static Singleton* s_singletonInstance = new Singleton;
+		return s_singletonInstance;
+	}
 
 private:
 
-	static bool s_instanceFlag;
-	static Singleton* s_singletonInstance;
+	//static bool s_instanceFlag;
+	
 
 };
 

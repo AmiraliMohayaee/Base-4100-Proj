@@ -11,7 +11,7 @@ protected:
 	// these are on heap, we need to make 
 	// sure the right form of deletion is made
 	// on heap
-	NonCopyable(int value): m_val(value) {}
+	NonCopyable();
 	NonCopyable(const NonCopyable&) = delete;
 
 	// Ensuring an instance cannot be copied if attempted
@@ -24,5 +24,5 @@ private:
 
 	// Mutex for protecting against multi-threaded
 	// copying
-	std::mutex m_mutex;
+	//std::mutex m_mutex;
 };

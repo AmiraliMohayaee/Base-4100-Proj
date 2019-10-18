@@ -1,6 +1,7 @@
 #pragma once
 
 #include <iostream>
+#include "Singleton.h"
 
 // Defining that you're running win2000 or higher
 #define _WIN32_WINNT 0x0500
@@ -10,9 +11,7 @@
 #include <Windows.h>
 
 
-using namespace std;
-
-class ScreenManager
+class ScreenManager : public NonCopyable
 {
 public:
 	void AtExit();

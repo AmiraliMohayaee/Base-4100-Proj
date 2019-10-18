@@ -4,9 +4,12 @@
 #include "Enemy.h"
 #include "Graph.h"
 #include "ScreenManager.h"
+#include "NonCopyable.h"
+#include "Singleton.h"
 
 
-class Game
+
+class Game //: public NonCopyable
 {
 public:
 	Game();

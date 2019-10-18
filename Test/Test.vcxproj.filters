@@ -110,9 +110,6 @@
     <ClInclude Include="ScreenManager.h">
       <Filter>Header Files\Screen</Filter>
     </ClInclude>
-    <ClInclude Include="Timer.h">
-      <Filter>Header Files\Data</Filter>
-    </ClInclude>
     <ClInclude Include="GameState.h">
       <Filter>Header Files\Data\StateManagement</Filter>
     </ClInclude>
@@ -120,6 +117,12 @@
       <Filter>Header Files\Data\StateManagement</Filter>
     </ClInclude>
     <ClInclude Include="EventHandler.h">
+      <Filter>Header Files\Data\Event Management</Filter>
+    </ClInclude>
+    <ClInclude Include="MyMaths.h">
+      <Filter>Header Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.h">
       <Filter>Header Files\Data\Event Management</Filter>
     </ClInclude>
   </ItemGroup>

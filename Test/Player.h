@@ -7,6 +7,7 @@ class Player: public GameObject
 {
 public:
 	Player();
+	~Player();
 	void Draw();
 	void Update();
 	int GetPlayerPos();

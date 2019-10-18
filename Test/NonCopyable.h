@@ -7,12 +7,15 @@
 
 class NonCopyable
 {
-public:
+protected:
 	// these are on heap, we need to make 
 	// sure the right form of deletion is made
 	// on heap
 	NonCopyable(int value): m_val(value) {}
 	NonCopyable(const NonCopyable&) = delete;
+
+	// Ensuring an instance cannot be copied if attempted
+	// to assign
 	NonCopyable& operator=(const NonCopyable) = delete;
 
 

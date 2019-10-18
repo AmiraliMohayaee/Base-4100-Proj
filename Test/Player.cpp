@@ -7,6 +7,11 @@ Player::Player() : GameObject()
 	posY = 0;
 }
 
+Player::~Player()
+{
+	delete m_health;
+}
+
 void Player::Draw() 
 {
 	std::cout << "Drawing Player\n";

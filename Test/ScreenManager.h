@@ -17,6 +17,13 @@ public:
 	void AtExit();
 	void ClearScreen();
 	void ConsoleResize(int width, int height);
+
+	static ScreenManager* GetInstance()
+	{
+		static ScreenManager* s_screenInstance =
+			new ScreenManager;
+		return s_screenInstance;
+	}
 };
 
 

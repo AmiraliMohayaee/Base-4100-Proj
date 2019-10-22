@@ -37,6 +37,12 @@
     <Filter Include="Header Files\Data\Event Management">
       <UniqueIdentifier>{203a603f-08e9-49cc-ab6b-d6b06748ff21}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Data\Patterns">
+      <UniqueIdentifier>{af39b436-c367-472c-ac0b-f5d4fc49cd9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Data\EventManagement">
+      <UniqueIdentifier>{264bd321-3e6b-47e4-a934-86407ddd6287}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -67,7 +73,7 @@
       <Filter>Source Files\Screen</Filter>
     </ClCompile>
     <ClCompile Include="EventHandler.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Data\EventManagement</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -101,12 +107,6 @@
     <ClInclude Include="Piano.h">
       <Filter>Header Files\Objects</Filter>
     </ClInclude>
-    <ClInclude Include="NonCopyable.h">
-      <Filter>Header Files\Data</Filter>
-    </ClInclude>
-    <ClInclude Include="Singleton.h">
-      <Filter>Header Files\Data</Filter>
-    </ClInclude>
     <ClInclude Include="ScreenManager.h">
       <Filter>Header Files\Screen</Filter>
     </ClInclude>
@@ -124,6 +124,12 @@
     </ClInclude>
     <ClInclude Include="Timer.h">
       <Filter>Header Files\Data\Event Management</Filter>
+    </ClInclude>
+    <ClInclude Include="Singleton.h">
+      <Filter>Header Files\Data\Patterns</Filter>
+    </ClInclude>
+    <ClInclude Include="NonCopyable.h">
+      <Filter>Header Files\Data\Patterns</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

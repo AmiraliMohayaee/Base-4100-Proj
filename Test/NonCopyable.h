@@ -11,7 +11,7 @@ protected:
 	// these are on heap, we need to make 
 	// sure the right form of deletion is made
 	// on heap
-	NonCopyable();
+	NonCopyable() = default;
 	NonCopyable(const NonCopyable&) = delete;
 
 	// Ensuring an instance cannot be copied if attempted

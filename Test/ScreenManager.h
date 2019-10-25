@@ -11,19 +11,29 @@
 #include <Windows.h>
 
 
-class ScreenManager : public NonCopyable
+class ScreenManager //: public NonCopyable
 {
 public:
+	ScreenManager();
+	~ScreenManager();
+
+	void DrawLine(int width, int r, int g, int b, int x, int y);
+
 	void AtExit();
 	void ClearScreen();
 	void ConsoleResize(int width, int height);
 
-	static ScreenManager* GetInstance()
-	{
-		static ScreenManager* s_screenInstance =
-			new ScreenManager;
-		return s_screenInstance;
-	}
+	//static ScreenManager* GetInstance()
+	//{
+	//	static ScreenManager* s_screenInstance =
+	//		new ScreenManager;
+	//	return s_screenInstance;
+	//}
+	
+private:
+	// Get window handle to console, and device context
+	HWND console_handle;
+	HDC device_context;
 };
 
 

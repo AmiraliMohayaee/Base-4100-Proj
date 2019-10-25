@@ -14,7 +14,7 @@ Game::Game()
 
 	m_screen = new ScreenManager();
 
-	m_whileGameRunning = false;
+	m_whileGameRunning = true;
 
 	
 }
@@ -53,23 +53,38 @@ void Game::DrawGraph()
 
 }
 
+
 void Game::Update()
 {
-	while (!m_whileGameRunning)
+	while (m_whileGameRunning)
 	{
 		cout << "Updating Game\n";
 		//m_graph->Draw();
 		//m_player->Update();
-		DrawGraph();
+		//DrawGraph();
 		Sleep(1000);
 		m_screen->ClearScreen();
 	}
 }
 
 
+void Game::DrawHud()
+{
+	std::cout << "+===============+" << std::endl;
+	std::cout << "|               |" << std::endl;
+	std::cout << "|               |" << std::endl;
+	std::cout << "|               |" << std::endl;
+	std::cout << "|               |" << std::endl;
+	std::cout << "|               |" << std::endl;
+	std::cout << "|               |" << std::endl;
+	std::cout << "|               |" << std::endl;
+
+}
+
+
 void Game::Intro()
 {
-	cout << "NYAHAHAHAHAHAHAHAAAA\n";
+	cout << "+=============================+\n";
 
 	cout << R"(
                                                                                           
@@ -127,9 +142,15 @@ void Game::Intro()
 
 	cout << endl;
 
-
 	m_screen->AtExit();
 	m_screen->ClearScreen();
+}
+
+
+
+void Game::ShowPlayerDetails()
+{
+
 }
 
 

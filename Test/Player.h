@@ -3,6 +3,7 @@
 #include "GameObject.h"
 #include <string>
 #include <assert.h>
+#include "Inventory.h"
 
 
 class Player: public GameObject
@@ -13,15 +14,17 @@ public:
 	void Draw();
 	void Update();
 
-	std::string GetPlayerName(std::string& name) const;
+	std::string GetPlayerName() const;
 	void SetPlayerName(std::string& name);
 
 	int GetPlayerPos();
 	void SetPlayerPos(int x, int y);
-	bool CheckLifeState();
+	bool CheckLifeState() const;
 
 
 private:
-	unsigned int* m_health;
-	std::string* m_name;
+	unsigned int m_health;
+	std::string m_name;
+
+	Inventory* m_inv;
 };

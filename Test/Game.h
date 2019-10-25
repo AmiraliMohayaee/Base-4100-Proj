@@ -20,7 +20,8 @@ public:
 	void Update();
 
 	void Intro();
-
+	void ShowPlayerDetails();
+	void DrawHud();
 	void Battle();
 
 	//static Game* GetInstance()

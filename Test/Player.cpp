@@ -5,11 +5,13 @@ Player::Player()
 {
 	posX = 0;
 	posY = 0;
+	m_health = 100;
+	m_name = "";
 }
 
 Player::~Player()
 {
-	delete m_health;
+	//delete m_name;
 }
 
 void Player::Draw() 
@@ -22,16 +24,15 @@ void Player::Update()
 	std::cout << "Updating Player\n";
 }
 
-std::string Player::GetPlayerName(std::string& name) const
+std::string Player::GetPlayerName() const
 {
-	*m_name = name;
-	assert(m_name);
-	return *m_name;
+	return m_name;
 }
 
 void Player::SetPlayerName(std::string& name)
 {
-
+	//assert(name);
+	m_name = name;
 }
 
 int Player::GetPlayerPos()
@@ -45,7 +46,7 @@ void Player::SetPlayerPos(int x, int y)
 	posY = y;
 }
 
-bool Player::CheckLifeState()
+bool Player::CheckLifeState() const
 {
 	return false;
 }

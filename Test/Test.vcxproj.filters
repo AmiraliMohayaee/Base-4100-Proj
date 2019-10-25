@@ -75,6 +75,9 @@
     <ClCompile Include="EventHandler.cpp">
       <Filter>Source Files\Data\EventManagement</Filter>
     </ClCompile>
+    <ClCompile Include="Inventory.cpp">
+      <Filter>Source Files\Objects</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Enemy.h">
@@ -130,6 +133,9 @@
     </ClInclude>
     <ClInclude Include="NonCopyable.h">
       <Filter>Header Files\Data\Patterns</Filter>
+    </ClInclude>
+    <ClInclude Include="Inventory.h">
+      <Filter>Header Files\Objects</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

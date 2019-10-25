@@ -1,6 +1,28 @@
 #include "ScreenManager.h"
 
 
+ScreenManager::ScreenManager()
+{
+	// Get window handle to console, and device context
+	console_handle = GetConsoleWindow();
+	device_context = GetDC(console_handle);
+}
+
+ScreenManager::~ScreenManager()
+{
+	ReleaseDC(console_handle, device_context);
+}
+
+void ScreenManager::DrawLine(int width, int r, int g, 
+	int b, int x, int y)
+{
+	HPEN pen = CreatePen(PS_SOLID, width, RGB(r, g, b));
+	SelectObject(device_context, pen);
+
+	LineTo(device_context, x, y);
+}
+
+
 void ScreenManager::AtExit()
 {
 	std::cin.clear();
@@ -48,10 +70,10 @@ void ScreenManager::ClearScreen()
 
 void ScreenManager::ConsoleResize(int width, int height)
 {
-	HWND console = GetConsoleWindow();
+	console_handle = GetConsoleWindow();
 	RECT r;
-	GetWindowRect(console, &r); //stores the console's current dimensions
+	GetWindowRect(console_handle, &r); //stores the console's current dimensions
 
 	//MoveWindow(window_handle, x, y, width, height, redraw_window);
-	MoveWindow(console, r.left, r.top, width, height, TRUE);
+	MoveWindow(console_handle, r.left, r.top, width, height, FALSE);
 }

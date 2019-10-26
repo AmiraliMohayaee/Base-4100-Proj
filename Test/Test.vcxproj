@@ -139,7 +139,9 @@
     <ClInclude Include="AsciiChars.h" />
     <ClInclude Include="ConsoleResize.h" />
     <ClInclude Include="Enemy.h" />
+    <ClInclude Include="Event.h" />
     <ClInclude Include="EventHandler.h" />
+    <ClInclude Include="File.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="Graph.h" />

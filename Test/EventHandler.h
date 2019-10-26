@@ -1,18 +1,25 @@
 #pragma once
 
-#include <Windows.h>
+#include <windows.h>
+#include <stdio.h>
+#include "Event.h"
 
 
-class EventHandler
+class EventHandler : public Event
 {
 public:
 	EventHandler();
 
 	//void GetKeyEvent();
 	bool SetKeyEvent(int &keyEvent);
-
-
+	
+	
+	LRESULT WndProc(HWND winHandler, UINT sysMessage, 
+		WPARAM wparam, LPARAM lparam);
+	
 private:
 	int m_keyEvent;
-	LPBYTE* m_event;
+	HANDLE m_eventHandle;
+	DWORD m_key;
+
 };

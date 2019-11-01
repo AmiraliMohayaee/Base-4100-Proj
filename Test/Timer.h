@@ -11,6 +11,6 @@ public:
 
 
 private:
-	std::chrono* m_timer;
-
+	std::chrono m_timer;
+	
 };

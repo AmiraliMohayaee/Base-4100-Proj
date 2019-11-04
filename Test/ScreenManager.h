@@ -9,6 +9,7 @@
 //it is important that the above line be typed
 //  BEFORE <windows.h> is included
 #include <Windows.h>
+#include <dos.h>	// Can't believe this still exists
 
 
 class ScreenManager //: public NonCopyable
@@ -22,6 +23,7 @@ public:
 	void AtExit();
 	void ClearScreen();
 	void ConsoleResize(int width, int height);
+	void ChangeTextColor(int color);
 
 	//static ScreenManager* GetInstance()
 	//{
@@ -34,6 +36,7 @@ private:
 	// Get window handle to console, and device context
 	HWND console_handle;
 	HDC device_context;
+	int m_colour = 0; // Setting to 0 = black by default
 };
 
 

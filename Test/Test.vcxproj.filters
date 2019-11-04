@@ -78,6 +78,12 @@
     <ClCompile Include="Inventory.cpp">
       <Filter>Source Files\Objects</Filter>
     </ClCompile>
+    <ClCompile Include="GameArtAssets.cpp">
+      <Filter>Source Files\Screen</Filter>
+    </ClCompile>
+    <ClCompile Include="Timer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Enemy.h">
@@ -142,6 +148,9 @@
     </ClInclude>
     <ClInclude Include="File.h">
       <Filter>Header Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="GameArtAssets.h">
+      <Filter>Header Files\Screen</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

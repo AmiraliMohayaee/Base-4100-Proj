@@ -22,7 +22,6 @@ void ScreenManager::DrawLine(int width, int r, int g,
 	LineTo(device_context, x, y);
 }
 
-
 void ScreenManager::AtExit()
 {
 	std::cin.clear();
@@ -76,4 +75,12 @@ void ScreenManager::ConsoleResize(int width, int height)
 
 	//MoveWindow(window_handle, x, y, width, height, redraw_window);
 	MoveWindow(console_handle, r.left, r.top, width, height, FALSE);
+}
+
+void ScreenManager::ChangeTextColor(int colour)
+{
+	HANDLE hConsole;
+	hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+
+	SetConsoleTextAttribute(console_handle, colour);
 }

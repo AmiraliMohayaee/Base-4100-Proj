@@ -11,8 +11,8 @@ public:
 	EventHandler();
 
 	//void GetKeyEvent();
-	bool SetKeyEvent(int &keyEvent);
-	
+	bool GetKeyEvent();
+	bool GetStdInput();
 	
 	LRESULT WndProc(HWND winHandler, UINT sysMessage, 
 		WPARAM wparam, LPARAM lparam);
@@ -20,6 +20,6 @@ public:
 private:
 	int m_keyEvent;
 	HANDLE m_eventHandle;
-	DWORD m_key;
+	DWORD m_mode;
 
 };

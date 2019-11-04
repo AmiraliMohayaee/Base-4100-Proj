@@ -6,6 +6,7 @@
 #include "ScreenManager.h"
 #include "NonCopyable.h"
 #include "Singleton.h"
+#include "GameArtAssets.h"
 
 
 class Game
@@ -24,6 +25,8 @@ public:
 	void DrawHud();
 	void Battle();
 
+	void GameOver();
+
 	//static Game* GetInstance()
 	//{
 	//	static Game* s_gameInstance = new Game;
@@ -33,6 +36,7 @@ public:
 	
 private:
 	ScreenManager* m_screen;
+	GameArtAssets m_artAssets;
 
 	GameObject* m_go;
 	Player* m_player;

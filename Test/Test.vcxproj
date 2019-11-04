@@ -127,12 +127,14 @@
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="EventHandler.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GameArtAssets.cpp" />
     <ClCompile Include="Graph.cpp" />
     <ClCompile Include="Inventory.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Piano.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="ScreenManager.cpp" />
+    <ClCompile Include="Timer.cpp" />
     <ClCompile Include="UserDetails.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -143,6 +145,7 @@
     <ClInclude Include="EventHandler.h" />
     <ClInclude Include="File.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="GameArtAssets.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="Graph.h" />
     <ClInclude Include="Inventory.h" />

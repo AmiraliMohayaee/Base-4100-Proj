@@ -63,7 +63,7 @@ void ScreenManager::ClearScreen()
 		&count
 	)) return;
 
-	/* Move the cursor home */
+	/* Move the cursor home to starting position at coords 0, 0 */
 	SetConsoleCursorPosition(hStdOut, homeCoords);
 }
 

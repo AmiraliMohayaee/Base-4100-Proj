@@ -7,6 +7,7 @@
 #include "NonCopyable.h"
 #include "Singleton.h"
 #include "GameArtAssets.h"
+#include <string>
 
 
 class Game
@@ -17,12 +18,12 @@ public:
 	void Init();
 	void Draw();
 	void DrawGraph();
-
 	void Update();
 
+
 	void Intro();
-	void ShowPlayerDetails();
-	void DrawHud();
+	void GetPlayerInput(std::string input);
+	void DrawHud();	// Draws the Hud and shows player's details
 	void Battle();
 
 	void GameOver();
@@ -32,7 +33,7 @@ public:
 	//	static Game* s_gameInstance = new Game;
 	//	return s_gameInstance;
 	//}
-
+	
 	
 private:
 	ScreenManager* m_screen;
@@ -43,5 +44,7 @@ private:
 	Enemy* m_enemy;
 	Graph* m_graph;
 
-	bool m_whileGameRunning;
+	std::string* m_playerInput;
+
+	bool m_whileGameRunning = true;
 };

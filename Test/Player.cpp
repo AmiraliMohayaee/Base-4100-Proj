@@ -1,6 +1,7 @@
 #include "Player.h"
 #include <iostream>
 
+
 Player::Player()
 {
 	posX = 0;
@@ -51,7 +52,7 @@ void Player::SetPlayerPos(int x, int y)
 
 bool Player::CheckLifeState() const
 {
-	return false;
+	return true;
 }
 
 void Player::CheckInventory(Inventory& inv)
@@ -75,7 +76,7 @@ void Player::GetInv(const std::string& name)
 {
 	auto it = m_map.find("name");
 
-	std::cout << "you ahve" << it->first << " yeah\n";
+	std::cout << "you have " << it->first << ".\n";
 }
 
 void Player::RemoveInv(const std::string& name)
@@ -87,7 +88,14 @@ void Player::CheckInv()
 {
 	for (auto it = m_map.begin(); it != m_map.end(); ++it)
 	{
-		std::cout << "Player has a " << it->first << " in the inventory.\n";
+		if (m_map.empty())
+		{
+			std::cout << "Player has no items in the inventory" << std::endl;
+		}
+		else
+		{
+			std::cout << "Player has a " << it->first << " in the inventory.\n";
+		}
 	}
 }
 

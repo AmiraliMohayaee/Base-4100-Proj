@@ -9,7 +9,7 @@
 //it is important that the above line be typed
 //  BEFORE <windows.h> is included
 #include <Windows.h>
-#include <dos.h>	// Can't believe this still exists
+//#include <dos.h>	// Can't believe this still exists
 
 
 class ScreenManager //: public NonCopyable

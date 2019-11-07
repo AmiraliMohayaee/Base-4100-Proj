@@ -6,6 +6,7 @@ GameArtAssets::GameArtAssets()
 
 void GameArtAssets::IntroSceleton()
 {
+	SetConsoleTextAttribute(GetStdHandle(STD_INPUT_HANDLE), 0x5B);
 	std::cout << "+=============================+\n";
 
 	std::cout << R"(
@@ -64,11 +65,16 @@ void GameArtAssets::IntroSceleton()
 
 	std::cout << std::endl;
 
-	m_timer.Sleep(1000);
+	m_timer.Sleep(4000);
 }
 
 void GameArtAssets::GameOver()
 {
+	Beep(1397, 200);
+	Beep(1397, 200);
+	Beep(1397, 200);
+	Beep(1175, 2000);
+
 	std::cout << R"(
 		     ___          
             /   \\        
@@ -91,16 +97,60 @@ void GameArtAssets::GameOver()
 
 	std::cout << "'Ello, mate. You ready fo' your 'pointment?" <<
 		std::endl;
+
+
+	std::cout << "GAME OVER" << std::endl;
 }
+
 
 void GameArtAssets::Monster()
 {
-
+	std::cout << R"(
+   ,    ,    /\   /\
+  /( /\ )\  _\ \_/ /_
+  |\_||_/| < \_   _/ >
+  \______/  \|0   0|/
+    _\/_   _(_  ^  _)_
+   ( () ) /`\|V"""V|/`\
+     {}   \  \_____/  /
+     ()   /\   )=(   /\
+     {}  /  \_/\=/\_/  \
+	)" << std::endl;
 }
 
 void GameArtAssets::Player()
 {
-	
+	std::cout << R"(
+	              _,.
+           ,''   `.     __....__ 
+         ,'        >.-''        ``-.__,)
+       ,'      _,''           _____ _,'
+      /      ,'           _.:':::_`:-._ 
+     :     ,'       _..-''  \`'.;.`-:::`:. 
+     ;    /       ,'  ,::'  .\,'`.`. `\::)`  
+    /    /      ,'        \   `. '  )  )/ 
+   /    /      /:`.     `--`'   \     '`
+   `-._/      /::::)             )
+      /      /,-.:(   , _   `.-' 
+     ;      :(,`.`-' ',`.     ;
+    :       |:\`' )      `-.._\ _
+    |         `:-(             `)``-._ 
+    |           `.`.        /``'      ``:-.-__,
+    :           / `:\ .     :            ` \`-
+     \        ,'   '}  `.   |
+  _..-`.    ,'`-.   }   |`-'    
+,'__    `-'' -.`.'._|   | 
+    ```--..,.__.(_|.|   |::._
+      __..','/ ,' :  `-.|::)_`.
+      `..__..-'   |`.      __,' 
+                  :  `-._ `  ;
+                   \ \   )  /
+                   .\ `.   /
+                    ::    /
+                    :|  ,'
+                    :;,' 
+                    `'
+	)" << std::endl;
 }
 
 void GameArtAssets::DrawConsoleStart()

@@ -11,7 +11,7 @@ public:
 	EventHandler();
 
 	//void GetKeyEvent();
-	bool GetKeyEvent();
+	bool GetKeyEvent(char ch);
 	bool GetStdInput();
 	
 	LRESULT WndProc(HWND winHandler, UINT sysMessage, 

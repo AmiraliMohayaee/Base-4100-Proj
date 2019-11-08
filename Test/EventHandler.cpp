@@ -8,7 +8,7 @@ EventHandler::EventHandler()
 	m_mode = 0;
 }
 
-bool EventHandler::GetKeyEvent()
+bool EventHandler::GetKeyEvent(char ch)
 {
 	m_eventHandle = GetStdHandle(STD_INPUT_HANDLE);
 	GetConsoleMode(m_eventHandle, &m_mode);
@@ -16,7 +16,7 @@ bool EventHandler::GetKeyEvent()
 		ENABLE_PROCESSED_INPUT);
 
 	std::cout << "Use the Input arrows...\n" << std::flush;
-	int ch = std::cin.get();
+	ch = std::cin.get();
 
 	switch (ch)
 	{

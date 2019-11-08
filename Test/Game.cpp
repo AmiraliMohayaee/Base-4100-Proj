@@ -87,7 +87,7 @@ void Game::Update()
 void Game::DrawHud()
 {
 	std::cout << "+=====================+" << std::endl;
-	std::cout << "|  " << m_player->Draw(); << "                |" << std::endl;
+	std::cout << "|                     |" << std::endl;
 	std::cout << "|                     |" << std::endl;
 	std::cout << "|                     |" << std::endl;
 	std::cout << "|                     |" << std::endl;

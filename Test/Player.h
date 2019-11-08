@@ -20,6 +20,7 @@ public:
 	int GetPlayerPos();
 	void SetPlayerPos(int x, int y);
 	bool CheckLifeState() const;
+	int GetHealth();
 
 	void CheckInventory(Inventory &inv);
 
@@ -27,6 +28,11 @@ public:
 	void GetInv(const std::string& name);
 	void RemoveInv(const std::string& name);
 	void CheckInv();
+	int NumInInv();
+
+	int RollDamage();
+	void GetDamageVal();
+
 
 	// When player dies, it keeps the inventory 
 	// so another player can pick it up
@@ -35,11 +41,9 @@ public:
 	const Inventory* GetItem();
 
 private:
-	unsigned int m_health;
 	std::string m_name;
 
 	Inventory* m_inv;
 
 	std::map<std::string, Inventory> m_map;
-
 };

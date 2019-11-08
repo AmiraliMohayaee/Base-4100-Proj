@@ -100,6 +100,8 @@ void GameArtAssets::GameOver()
 
 
 	std::cout << "GAME OVER" << std::endl;
+
+	m_timer.Sleep(2500);
 }
 
 
@@ -116,6 +118,11 @@ void GameArtAssets::Monster()
      ()   /\   )=(   /\
      {}  /  \_/\=/\_/  \
 	)" << std::endl;
+
+	std::cout << "Here's your generic baddie before we go into the/n" <<
+		"HUD" << std::endl;
+
+	m_timer.Sleep(1000);
 }
 
 void GameArtAssets::Player()
@@ -151,6 +158,8 @@ void GameArtAssets::Player()
                     :;,' 
                     `'
 	)" << std::endl;
+
+	m_timer.Sleep(1500);
 }
 
 void GameArtAssets::DrawConsoleStart()

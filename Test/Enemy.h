@@ -6,13 +6,16 @@ class Enemy : public GameObject
 {
 public: 
 	Enemy();
+	~Enemy();
 
 	void Draw();
 	void Update();
 
 	int RollDamage();
 	void GetDamageVal();
+	int GetHealth();
 
-private:
-	int dmg;
+	bool CheckLifeState() const;
+
+
 };

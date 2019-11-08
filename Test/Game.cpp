@@ -4,13 +4,11 @@
 
 
 
-Game::Game()
+Game::Game() 
 {
 	m_graph = new Graph();
-    m_player = new Player();
-	m_enemy = new Enemy();
-	//GameObject m_go = &m_player;
-
+	m_goPlayer = new Player();
+	m_goEnemy = new Enemy();
 	m_screen = new ScreenManager();
 
 	m_playerInput = nullptr;
@@ -18,11 +16,12 @@ Game::Game()
 	m_whileGameRunning = true;
 }
 
+
 Game::~Game()
 {
 	delete m_graph;
-	delete m_player;
-	delete m_enemy;
+	delete m_goPlayer;
+	delete m_goEnemy;
 	delete m_playerInput;
 }
 
@@ -31,12 +30,13 @@ void Game::Init()
 	std::cout << "initializing Game\n";
 }
 
+// Draw is not being called in this case due to 
+// redundancy
 void Game::Draw()
 {
 	std::cout << "Drawing Game\n";
-	m_graph->Draw();
-	m_player->Draw();
-	m_player->Update();
+	//m_graph->Draw();
+	m_goPlayer->Draw();
 }
 
 void Game::DrawGraph()
@@ -57,44 +57,57 @@ void Game::Update()
 {
 	std::cout << "Welcome to a daring adventure, Player." << std::endl;
 
-	m_player->Draw();
+	m_goPlayer->Draw();
 	m_artAssets.Player();
+
+	m_screen->ClearScreen();
+	m_artAssets.Monster();
+
+	std::cout << "When you're ready to go, press ENTER..." << std::endl;
+	m_screen->AtExit();
 
 	while (m_whileGameRunning)
 	{
 		std::cout << "Updating Game\n";
-		//m_graph->Draw();
-		//m_player->Update();
-		//DrawGraph();
+
 		Sleep(1000);
 		m_screen->ClearScreen();
 
 		std::cout << "Please, enter your choice:" << std::endl;
-		GetPlayerInput(*m_playerInput);
+		DrawHud();
+
+		//GetPlayerInput(*m_playerInput);
+
 
 
 		// Check if player is dead, break
-		if (m_player->CheckLifeState() != 0)
+		if (m_goPlayer->CheckLifeState() != false)
 		{
 			m_whileGameRunning = false;
 		}
-	}
-
-	m_artAssets.GameOver();
+	}     
 }
 
 
+void Game::Battle()
+{
+	m_artAssets.Monster();
+	m_goEnemy->RollDamage();
+	m_goEnemy->GetDamageVal();
+}
+
 void Game::DrawHud()
 {
-	std::cout << "+=====================+" << std::endl;
-	std::cout << "|                     |" << std::endl;
-	std::cout << "|                     |" << std::endl;
-	std::cout << "|                     |" << std::endl;
-	std::cout << "|                     |" << std::endl;
-	std::cout << "|                     |" << std::endl;
-	std::cout << "|                     |" << std::endl;
-	std::cout << "|                     |" << std::endl;
-	std::cout << "|_____________________|" << std::endl;
+	m_screen->ChangeTextColor(0x1A);
+	std::cout << "+===========================" << std::endl;
+	std::cout << "| The Player has " << m_goPlayer->GetHealth() << " health points. " << std::endl;
+	std::cout << "| Iventory has " << dynamic_cast<Player*>(m_goPlayer)->NumInInv() << " items." << std::endl;
+	std::cout << "| The Enemy has " << m_goEnemy->GetHealth() << " health points. " << std::endl;
+	std::cout << "|                                            " << std::endl;
+	std::cout << "|                                            " << std::endl;
+	std::cout << "|                                            " << std::endl;
+	std::cout << "|                                            " << std::endl;
+	std::cout << "|____________________________________________" << std::endl;
 }
 
 
@@ -118,14 +131,14 @@ void Game::GetPlayerInput(std::string input)
 
 
 	//}
+
 }
 
-
-void Game::Battle()
+void Game::ClearPlayerInput()
 {
-	m_enemy->RollDamage();
-	m_enemy->GetDamageVal();
+	m_playerInput->clear();
 }
+
 
 void Game::GameOver()
 {

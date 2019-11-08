@@ -3,9 +3,21 @@
 #include <random>
 
 
-Enemy::Enemy() : GameObject()
+Enemy::Enemy()
 {
-	dmg = 0;
+	m_dmg = 0;
+
+	posX = 0;
+	posY = 0;
+
+	m_isAlive = true;
+
+	m_health = 100;
+}
+
+Enemy::~Enemy()
+{
+
 }
 
 void Enemy::Draw()
@@ -37,4 +49,14 @@ void Enemy::GetDamageVal()
 {
 	std::cout << "You get hit for " <<
 		RollDamage() << " \n";
+}
+
+int Enemy::GetHealth()
+{
+	return m_health;
+}
+
+bool Enemy::CheckLifeState() const
+{
+	return m_isAlive;
 }

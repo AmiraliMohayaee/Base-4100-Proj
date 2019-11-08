@@ -10,12 +10,16 @@ Player::Player()
 	m_name = "";
 
 	// Allocating memory for the inventory
-	m_inv = new Inventory;
+	m_inv = new Inventory();
+
+	m_dmg = 0;
+
+	m_isAlive = true;
 }
 
 Player::~Player()
 {
-	//delete m_name;
+	delete m_inv;
 }
 
 void Player::Draw() 
@@ -52,7 +56,12 @@ void Player::SetPlayerPos(int x, int y)
 
 bool Player::CheckLifeState() const
 {
-	return true;
+	return m_isAlive;
+}
+
+int Player::GetHealth()
+{
+	return m_health;
 }
 
 void Player::CheckInventory(Inventory& inv)
@@ -97,6 +106,21 @@ void Player::CheckInv()
 			std::cout << "Player has a " << it->first << " in the inventory.\n";
 		}
 	}
+}
+
+int Player::NumInInv()
+{
+	return m_map.size();
+}
+
+int Player::RollDamage()
+{
+	return m_dmg;
+}
+
+void Player::GetDamageVal()
+{
+
 }
 
 const std::map<std::string, Inventory>* Player::ReturnMap()

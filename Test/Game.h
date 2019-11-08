@@ -23,6 +23,7 @@ public:
 
 	void Intro();
 	void GetPlayerInput(std::string input);
+	void ClearPlayerInput();
 	void DrawHud();	// Draws the Hud and shows player's details
 	void Battle();
 
@@ -39,9 +40,12 @@ private:
 	ScreenManager* m_screen;
 	GameArtAssets m_artAssets;
 
-	GameObject* m_go;
-	Player* m_player;
-	Enemy* m_enemy;
+
+	//Player* m_player;
+	//Enemy* m_enemy;
+	GameObject* m_goPlayer;
+	GameObject* m_goEnemy;
+
 	Graph* m_graph;
 
 	std::string* m_playerInput;

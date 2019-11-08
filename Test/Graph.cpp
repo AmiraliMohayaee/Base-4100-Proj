@@ -50,6 +50,7 @@ void Graph::PopulateGraph()
 			m_map.insert(std::pair<int, char>((m_rows * m_columns)
 				, TOPRIGHT));
 		}
+	
 
 	case BOTTOMLEFT:
 		if (m_rows == 11 && m_columns == 0)

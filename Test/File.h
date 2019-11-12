@@ -9,6 +9,7 @@ class File
 {
 public:
 	File();
+	File(std::string& filename);
 	~File();
 	bool CreateAFile(std::string filename);
 	bool WriteToFile(std::string writing);
@@ -17,7 +18,6 @@ public:
 	std::string GetLine(int lineNum);
 
 private:
-	std::fstream m_openFile;
+	std::fstream* m_openFile;
 	std::string m_fileString;
-
 };

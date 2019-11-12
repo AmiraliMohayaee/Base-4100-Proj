@@ -11,13 +11,17 @@
 #include <Windows.h>
 //#include <dos.h>	// Can't believe this still exists
 
+#define Screen ScreenManager::GetInstance()
 
-class ScreenManager //: public NonCopyable
+class ScreenManager
 {
-public:
+private:
 	ScreenManager();
-	~ScreenManager();
+	ScreenManager(const ScreenManager& screen);
+	ScreenManager& operator=(const ScreenManager& screen);
 
+public:
+	~ScreenManager();
 	void DrawLine(int width, int r, int g, int b, int x, int y);
 
 	void AtExit();
@@ -25,12 +29,7 @@ public:
 	void ConsoleResize(int width, int height);
 	void ChangeTextColor(int color);
 
-	//static ScreenManager* GetInstance()
-	//{
-	//	static ScreenManager* s_screenInstance =
-	//		new ScreenManager;
-	//	return s_screenInstance;
-	//}
+	static ScreenManager* GetInstance();
 	
 private:
 	// Get window handle to console, and device context

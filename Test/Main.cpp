@@ -7,14 +7,14 @@
 
 
 int main()
-{
-	Game* game = new Game();
-	ScreenManager* screen = new ScreenManager();
+{	
 	EventHandler* events = new EventHandler();
 
-	screen->ConsoleResize(800, 800);
+	Screen->ConsoleResize(800, 800);
 
-	game->Intro();
-	game->Update();
-	game->GameOver();
+	Game::GetInstance()->Intro();
+	Game::GetInstance()->Update();
+	Game::GetInstance()->GameOver();
+
+	delete events;
 }

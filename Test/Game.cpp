@@ -3,14 +3,19 @@
 #include <iostream>
 
 
+Game* Game::GetInstance()
+{
+	static Game* s_gameInstance = new Game;
+	return s_gameInstance;
+}
+
 
 Game::Game() 
 {
 	m_graph = new Graph();
 	m_goPlayer = new Player();
 	m_goEnemy = new Enemy();
-	m_screen = new ScreenManager();
-
+	
 	m_playerInput = nullptr;
 
 	m_whileGameRunning = true;
@@ -60,18 +65,18 @@ void Game::Update()
 	m_goPlayer->Draw();
 	m_artAssets.Player();
 
-	m_screen->ClearScreen();
+	Screen->ClearScreen();
 	m_artAssets.Monster();
 
 	std::cout << "When you're ready to go, press ENTER..." << std::endl;
-	m_screen->AtExit();
+	Screen->AtExit();
 
 	while (m_whileGameRunning)
 	{
 		std::cout << "Updating Game\n";
 
 		Sleep(1000);
-		m_screen->ClearScreen();
+		Screen->ClearScreen();
 
 		std::cout << "Please, enter your choice:" << std::endl;
 		DrawHud();
@@ -98,7 +103,7 @@ void Game::Battle()
 
 void Game::DrawHud()
 {
-	m_screen->ChangeTextColor(0x1A);
+	Screen->ChangeTextColor(0x1A);
 	std::cout << "+===========================" << std::endl;
 	std::cout << "| The Player has " << m_goPlayer->GetHealth() << " health points. " << std::endl;
 	std::cout << "| Iventory has " << dynamic_cast<Player*>(m_goPlayer)->NumInInv() << " items." << std::endl;
@@ -115,8 +120,8 @@ void Game::Intro()
 {
 	m_artAssets.IntroSceleton();
 
-	m_screen->AtExit();
-	m_screen->ClearScreen();
+	Screen->AtExit();
+	Screen->ClearScreen();
 }
 
 

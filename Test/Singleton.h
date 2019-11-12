@@ -3,7 +3,7 @@
 #include "NonCopyable.h"
 
 
-class Singleton : public NonCopyable
+class Singleton 
 {
 public:
 	/*~Singleton()
@@ -19,7 +19,6 @@ public:
 
 private:
 
-	//static bool s_instanceFlag;
 	
 
 };

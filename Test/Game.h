@@ -8,12 +8,17 @@
 #include "Singleton.h"
 #include "GameArtAssets.h"
 #include <string>
+#include "File.h"
 
 
 class Game
 {
-public:
+private:
 	Game();
+	Game(const Game& game);
+	Game& operator=(const Game& game);
+
+public:
 	~Game();
 	void Init();
 	void Draw();
@@ -29,20 +34,12 @@ public:
 
 	void GameOver();
 
-	//static Game* GetInstance()
-	//{
-	//	static Game* s_gameInstance = new Game;
-	//	return s_gameInstance;
-	//}
+	static Game* GetInstance();
 	
 	
 private:
-	ScreenManager* m_screen;
 	GameArtAssets m_artAssets;
 
-
-	//Player* m_player;
-	//Enemy* m_enemy;
 	GameObject* m_goPlayer;
 	GameObject* m_goEnemy;
 

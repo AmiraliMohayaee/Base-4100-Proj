@@ -1,6 +1,12 @@
 #include "ScreenManager.h"
 
 
+ScreenManager* ScreenManager::GetInstance()
+{
+	static ScreenManager* s_screenInstance = new ScreenManager;
+	return s_screenInstance;
+}
+
 ScreenManager::ScreenManager()
 {
 	// Get window handle to console, and device context
